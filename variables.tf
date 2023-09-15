@@ -1,5 +1,5 @@
 variable "name-cluster" {
-  default = "duarte"
+  default = "jeftf"
 }
 
 variable "instance-type" {
@@ -7,7 +7,7 @@ variable "instance-type" {
 }
 
 variable "key" {
-  default = "deividdua"
+  default = "jefinho"
 }
 
 variable "instance-ami" {
