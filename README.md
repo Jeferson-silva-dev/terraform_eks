@@ -80,8 +80,8 @@ kubectl get nodes
 |------|-------------|------|---------|:--------:|
 | <a name="input_instance-ami"></a> [instance-ami](#input\_instance-ami) | n/a | `string` | `"ami-04cb4ca688797756f"` | no |
 | <a name="input_instance-type"></a> [instance-type](#input\_instance-type) | n/a | `string` | `"t3a.medium"` | no |
-| <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"deividdua"` | no |
-| <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"duarte"` | no |
+| <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"jefinho"` | no |
+| <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"jeftf"` | no |
 
 ## Outputs
 
