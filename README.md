@@ -4,6 +4,20 @@
 
 #### Consiste em provisionar AWS EKS
 
+#### Baixe o repositório
+
+```bash
+git clone https://github.com/deividduarte20/terraform-eks.git
+```
+
+#### Entre no diretório
+
+```bash
+cd terraform-eks
+```
+
+<img src=img/warning2.png width=25 height=25 /> Altere os valores das variáveis da pasta raiz no arquivo variables.tf.
+
 #### Inicie o terraform
 
 ```bash
@@ -11,16 +25,19 @@ terraform init
 ```
 
 #### Aplique a infraestrutura como código
+
 ```bash
 terraform apply
 ```
 
-#### Habilite a conexão com o EKS
+#### Habilite a conexão com o EKS (Insira o nome do seu cluster)
+
 ```bash
 aws eks --region us-east-1 update-kubeconfig --name nome-cluster
 ```
 
 #### Verifique os nodes
+
 ```bash
 kubectl get nodes
 ```
@@ -78,13 +95,14 @@ kubectl get nodes
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_instance-ami"></a> [instance-ami](#input\_instance-ami) | n/a | `string` | `"ami-04cb4ca688797756f"` | no |
-| <a name="input_instance-type"></a> [instance-type](#input\_instance-type) | n/a | `string` | `"t3a.medium"` | no |
-| <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"jefinho"` | no |
-| <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"jeftf"` | no |
+| <a name="input_instance-ami"></a> [instance-ami](#input\_instance-ami) | n/a | `string` | `"ami-04cb4ca688797756f"` | yes |
+| <a name="input_instance-type"></a> [instance-type](#input\_instance-type) | n/a | `string` | `"t3a.medium"` | yes |
+| <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"name-key"` | yes |
+| <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"name-cluster"` | yes |
+| <a name="input_name-sg"></a> [name-sg](#input\_name-sg) | n/a | `string` | `"name-sg"` | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_cluster-arn"></a> [cluster-arn](#output\_cluster-arn) | n/a |
+| <a name="output_cluster-arn"></a> [cluster-arn](#output\_cluster-arn) | after |
